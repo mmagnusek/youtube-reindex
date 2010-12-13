@@ -1,0 +1,16 @@
+!!!
+%html
+  %head
+    %meta{"http-equiv" => "Content-Type", :content => "text/html; charset=utf-8"}
+    %title= yield(:title)
+    = stylesheet_link_tag :all
+    = javascript_include_tag 'jquery-1.4.2-min', 'rails'
+    = yield :head
+  %body
+    #container
+      = render :partial => 'shared/flashes'
+      
+      = yield
+
+      = render :partial => 'shared/footer'
+

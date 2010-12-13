@@ -1,0 +1,14 @@
+body {
+  font: "Lucida Grande", "Tahoma", "Arial", sans-serif;
+  background-color: #fff;
+  color: #222;
+	width: 1000px;
+	margin: 0 auto;
+}
+a {
+  color: #699ccf;
+  text-decoration: none;
+}
+a:hover {
+  color: #4979a9;
+}
