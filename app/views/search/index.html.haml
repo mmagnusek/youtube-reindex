@@ -1,2 +1,8 @@
 - @videos.each do |video|
   = render :partial => 'video', :locals => {:video => video}
+
+= content_for :menu do  
+  = form_tag(search_index_path, :method => "get") do
+    = label_tag(:q, "Search for:")
+    = text_field_tag :q, params[:q], :class => 'text'
+    = submit_tag "Search", :class => 'submit'

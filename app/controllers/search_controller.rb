@@ -1,5 +1,10 @@
 class SearchController < ApplicationController
   def index
-    @videos = YoutubeSearch.get_top_favorites
+    keyword = params[:q]
+    if keyword
+      @videos = YoutubeSearch.get_by_keyword(keyword)
+    else
+      @videos = YoutubeSearch.get_top_favorites
+    end
   end
 end

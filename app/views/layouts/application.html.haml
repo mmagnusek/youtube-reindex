@@ -9,7 +9,9 @@
   %body
     #container
       = render :partial => 'shared/flashes'
-      
+      #header
+      #menu
+        = yield :menu
       = yield
 
       = render :partial => 'shared/footer'
