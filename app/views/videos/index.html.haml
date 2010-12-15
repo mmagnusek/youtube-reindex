@@ -1,8 +1,10 @@
-- @videos.results_by_location("a").each do |video|
+- @videos.each do |video|
   = render :partial => 'video', :locals => {:video => video}
 
 = content_for :menu do  
   = form_tag(videos_path, :method => "get") do
     = label_tag(:q, "Search for:")
     = text_field_tag :q, params[:q], :class => 'text'
+    = label_tag(:location, "location:")
+    = text_field_tag :location, params[:location], :class => 'text'
     = submit_tag "Search", :class => 'submit'

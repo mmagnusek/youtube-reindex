@@ -6,10 +6,9 @@ class GeoPosition
 
   class << self
     def distance_between(from, to)
-      from = self.ll from
-      # return 0.0 if from == to # fixes a "zero-distance" bug
+      from  = self.ll from
+      to    = {:lat => to.split(',').first, :lng => to.split(',').last}
       return 23423423 unless from
-      p "geo compare"
       begin
         EARTH_RADIUS_IN_KMS * 
             Math.acos( Math.sin(deg2rad(from[:lat])) * Math.sin(deg2rad(to[:lat])) + 

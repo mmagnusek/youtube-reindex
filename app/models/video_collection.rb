@@ -21,7 +21,6 @@ module VideoCollection
   end
   
   def results_by_location(point)
-    point = {:lat => "50.42689340423504", :lng => "16.195220947265625"}
     results.sort do |a,b|
       GeoPosition.distance_between(a,point) <=> GeoPosition.distance_between(b,point)
     end

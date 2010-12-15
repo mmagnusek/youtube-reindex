@@ -1,3 +1,9 @@
+%h2= @video['title']
+
+.author
+  %span Autor:
+  %span.name= @video['author']['name']
+
 %object{:width => "480", :height => "385"}
   %param{:name => "movie", :value => "http://www.youtube.com/v/#{params[:id]}?fs=1&amp;hl=en_US&amp;rel=0"}
   %param{:name => "allowFullScreen", :value => "true"}
