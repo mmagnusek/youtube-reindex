@@ -1,4 +1,4 @@
-- @videos.each do |video|
+- @videos.results_by_location("a").each do |video|
   = render :partial => 'video', :locals => {:video => video}
 
 = content_for :menu do  
