@@ -2,9 +2,9 @@ class VideosController < ApplicationController
   def index
     keyword = params[:q]
     if keyword
-      @videos = YoutubeSearch.get_by_keyword(keyword)
+      @videos = Video.get_by_keyword(keyword)
     else
-      @videos = YoutubeSearch.get_top_favorites
+      @videos = Video.get_top_favorites
     end
   end
   
