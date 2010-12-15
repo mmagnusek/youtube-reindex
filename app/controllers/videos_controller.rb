@@ -1,4 +1,4 @@
-class SearchController < ApplicationController
+class VideosController < ApplicationController
   def index
     keyword = params[:q]
     if keyword
@@ -6,5 +6,8 @@ class SearchController < ApplicationController
     else
       @videos = YoutubeSearch.get_top_favorites
     end
+  end
+  
+  def show
   end
 end
