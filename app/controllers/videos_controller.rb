@@ -9,7 +9,7 @@ class VideosController < ApplicationController
     
     params = {:q => keyword }
     unless location.blank?
-      geo_location = Geokit::Geocoders::YahooGeocoder.geocode location.removeaccents
+      geo_location = Geokit::Geocoders::GoogleGeocoder.geocode location.removeaccents
       params.merge!({:location => geo_location.ll})
       p geo_location
       @videos = VideoSearch.new(params).results_by_location(geo_location.ll)
