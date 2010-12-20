@@ -1,4 +1,7 @@
 cs:
+  layouts:
+    application:
+      headline: 'VMW - Youtube Reindex'
   shared:
     footer:
-      copyright: 'Všechna práva vyhrazena'
+      copyright: '© 2010 - ČVUT FIT - MI-VMW, Všechna práva vyhrazena'

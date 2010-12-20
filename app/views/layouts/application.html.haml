@@ -8,6 +8,7 @@
     = yield :head
   %body
     #container
+      %h1= link_to t('.headline'), "/"
       = render :partial => 'shared/flashes'
       #header
       #menu
