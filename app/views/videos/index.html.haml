@@ -6,6 +6,8 @@
     = form_tag(videos_path, :method => "get") do
       = label_tag(:q, "Search for:")
       = text_field_tag :q, params[:q], :class => 'text'
-      = label_tag(:location, "location:")
+      = label_tag(:location, "Location:")
       = text_field_tag :location, params[:location], :class => 'text'
+      = label_tag(:order, "Order by:")
+      = select_tag :o, options_for_select(@order_by_options, params[:o]), :class => 'select'
       = submit_tag "Search", :class => 'submit'

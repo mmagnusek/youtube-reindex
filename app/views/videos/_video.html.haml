@@ -1,3 +1,3 @@
-.video
-  .title= truncate video.title, :length => 20
-  .img= link_to (image_tag video.send(:"media:group")['media:thumbnail'].first['url']), "/videos/#{video_id video}"
+%dl.video
+  %dt.title= link_to (truncate video.title, :length => 20), "/videos/#{video_id video}", :title => video.title
+  %dd.img= link_to (image_tag video.send(:"media:group")['media:thumbnail'].first['url']), "/videos/#{video_id video}", :title => video.title

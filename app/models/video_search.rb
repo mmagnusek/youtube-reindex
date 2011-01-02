@@ -8,7 +8,7 @@ class VideoSearch
   
   class << self
     def new(params)
-      params.merge!({ :orderby => 'relevance', :'max-results' => 10})
+      params.merge!({:'max-results' => 10})
       hash = self.get('http://gdata.youtube.com/feeds/api/videos', :query => params)
       VideoCollection.new(hash)
     end

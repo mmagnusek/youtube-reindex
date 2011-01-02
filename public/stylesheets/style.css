@@ -1,87 +1,87 @@
 body {
-  font: "Lucida Grande", "Tahoma", "Arial", sans-serif;
-  background-color: #fff;
-  color: #222;
-	width: 1000px;
-	margin: 0 auto;
+    font: "Lucida Grande", "Tahoma", "Arial", sans-serif;
+    background-color: #fff;
+    color: #222;
+    width: 1000px;
+    margin: 0 auto;
 }
 a {
-  color: #699ccf;
-  text-decoration: none;
+    color: #699ccf;
+    text-decoration: none;
 }
 a:hover {
-  color: #4979a9;
+    color: #4979a9;
 }
 h1 {
-  position: absolute;
-  top: 50px;
-  left: 50px;
-  font-size: 40px;
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 40px;
 }
 
 h1 a,
 h1 a:hover {
-  color: #000;
+    color: #000;
 }
 h2 {
-  font-size: 25px;
+    font-size: 25px;
 }
 .author {
-  padding: 10px 0;
+    padding: 10px 0;
 }
 .author .name {
-  font-weight: bold;
+    font-weight: bold;
 }
 
 #container{
-  border: 1px solid #73CB17;
-  position: relative;
+    border: 1px solid #73CB17;
+    position: relative;
 }
 .videos {
-  overflow: hidden;
-  padding: 20px;
+    overflow: hidden;
+    padding: 20px;
 }
 #header{
-	background-image: url('/images/header-background.png');
-	width: 100%;
-	height: 160px;
+    background-image: url('/images/header-background.png');
+    width: 100%;
+    height: 160px;
 }
 #menu{
-	background-image: url('/images/menu-background.png');
-	width: 100%;
-	height: 65px;
-	margin-bottom: 15px;
+    background-image: url('/images/menu-background.png');
+    width: 100%;
+    height: 65px;
+    margin-bottom: 15px;
 }
 #menu form{
-	padding-top: 5px;
-	height: 34px;
-	overflow: hidden;
+    padding-top: 5px;
+    height: 34px;
+    overflow: hidden;
 }
 #menu form label{
-	
+
 }
 #menu form input{
-	border: 0px;
-	background-color: transparent;
-	height: 34px;
+    border: 0px;
+    background-color: transparent;
+    height: 34px;
 }
 #menu form input.text{
-	width: 270px;
-	background-image: url('/images/text-background.png');
-	padding-left: 10px;
-	font-size: 20px;
+    width: 200px;
+    background-image: url('/images/text-background.png');
+    padding-left: 10px;
+    font-size: 20px;
 }
 #menu form input.submit{
-	position: relative;
-	top: 0px;
-	width: 168px;
-	background-image: url('/images/search-button.png');
+    position: relative;
+    top: 0px;
+    width: 168px;
+    background-image: url('/images/search-button.png');
 }
 #footer{
-	clear: both;
-	background-image: url('/images/footer-background.png');
-	width: 100%;
-	height: 70px;
+    clear: both;
+    background-image: url('/images/footer-background.png');
+    width: 100%;
+    height: 70px;
 }
 .copyright {
     line-height: 70px;
@@ -89,7 +89,13 @@ h2 {
 }
 
 .video{
-	width: 20%;
-	height: 120px;
-	float: left;
+    text-align: center;
+    height: 120px;
+    float: left;
+    padding: 10px 0;
+    width: 20%;
+}
+
+.video dd {
+    padding: 10px 0;
 }

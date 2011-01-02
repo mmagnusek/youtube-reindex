@@ -4,6 +4,7 @@ class VideosController < ApplicationController
   require 'geokit'
   
   def index
+    order = params[:o].to_i
     keyword = params[:q]
     location = params[:location]
 
@@ -11,13 +12,16 @@ class VideosController < ApplicationController
       location = Geokit::Geocoders::IpGeocoder.geocode(request.remote_ip).city
     end
 
-    logger.info "Location Keyword: " + location + " IP: " + request.remote_ip
-
     geo_location = Geokit::Geocoders::GoogleGeocoder.geocode location.removeaccents
-    params = {:q => keyword, :location => geo_location.ll}
-    logger.info geo_location
-    p geo_location
-    @videos = VideoSearch.new(params).results_by_location(geo_location.ll)
+    params = {:q => keyword, :location => geo_location.ll, :order_by => order}
+
+    @order_by_options = {
+      'Distance' => VideoCollection::DISTANCE,
+      'Duration' => VideoCollection::DURATION,
+      'Published (Date)' => VideoCollection::PUBLISHED,
+      'Rating' => VideoCollection::RATING,
+      'Views' => VideoCollection::VIEWS}
+    @videos = VideoSearch.new(params).results_sorted(params)
   end
   
   def show
